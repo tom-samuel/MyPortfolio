@@ -1,115 +1,43 @@
-/* Reset & base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Typography */
+body { font-family: 'Merriweather', serif; background:#fff; color:#333; text-align:center; scroll-behavior:smooth; transition:0.3s; }
+header, .links a { font-family: 'Open Sans', Helvetica, sans-serif; }
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
-    text-align: center;
-    scroll-behavior: smooth;
-}
+/* Colors */
+header { background:#0077b6; color:#fff; padding:60px 20px; }
+header h1 { font-size:3rem; margin-bottom:10px; }
+header h2 { font-size:1.5rem; margin-bottom:10px; }
+.links a { margin:0 10px; padding:10px 20px; border:1px solid #fff; border-radius:5px; transition:0.3s; }
+.links a:hover { background:#023e8a; color:#fff; }
 
-a {
-    text-decoration: none;
-    color: #0077b6;
-    margin: 0 10px;
-}
+main { padding:60px 20px; max-width:1000px; margin:auto; }
+section { margin-bottom:60px; }
+section h3 { font-size:2rem; margin-bottom:20px; color:#0077b6; }
 
-header {
-    padding: 60px 20px;
-    background: #023e8a;
-    color: #fff;
-}
+/* Cards */
+.experience-card,.project-card { background:#fff; padding:20px; border-radius:10px; margin:20px auto; max-width:700px; box-shadow:0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+.experience-card:hover,.project-card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+.project-links a { margin:5px; padding:8px 15px; border:1px solid #0077b6; border-radius:5px; }
+.project-links a:hover { background:#0077b6; color:#fff; }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
+/* Experience images */
+.exp-img { width:60px; height:60px; margin-bottom:15px; }
 
-header h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
+/* Skills */
+.skills-container { display:flex; flex-wrap:wrap; justify-content:center; }
+.skill { background:#fff; margin:10px; padding:15px; border-radius:10px; width:250px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+.skill-bar { background:#e0e0e0; border-radius:5px; height:10px; margin:10px 0; }
+.progress { background:#0077b6; height:10px; border-radius:5px; width:0; transition:1s; }
 
-header p {
-    margin-bottom: 20px;
-}
+/* Dark mode */
+.theme-toggle { position:fixed; top:20px; right:20px; }
+body.dark { background:#121212; color:#eee; }
+body.dark header { background:#000; }
+body.dark .experience-card, body.dark .project-card, body.dark .skill { background:#1e1e1e; box-shadow:0 4px 6px rgba(0,0,0,0.5); }
+body.dark a { color:#00d4ff; }
+body.dark a:hover { color:#00bfff; }
 
-.links a {
-    padding: 10px 20px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.links a:hover {
-    background: #fff;
-    color: #023e8a;
-}
-
-main {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-section h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #023e8a;
-}
-
-.experience-card, .project-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 700px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.experience-card:hover, .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.skill {
-    background: #fff;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#contact p {
-    margin-bottom: 20px;
-}
-
-footer {
-    padding: 20px;
-    background: #023e8a;
-    color: #fff;
+/* Responsive */
+@media(max-width:768px){
+    .skills-container, .projects-container { flex-direction:column; align-items:center; }
+    .skill, .experience-card, .project-card { width:90%; }
 }
