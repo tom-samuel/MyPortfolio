@@ -1,151 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tomiwa Samuel | Full Stack Developer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tomiwa Samuel — Full Stack Developer & UI/UX Designer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js for skill charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Decorative animated shapes -->
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape s1"></span>
+    <span class="shape s2"></span>
+    <span class="shape s3"></span>
+  </div>
 
-<!-- Hero Section -->
-<header>
-    <div class="hero">
-        <img src="images/profile.png" alt="Tomiwa Samuel" class="profile-pic">
-        <h1>TOMIWA SAMUEL</h1>
-        <h2>Full Stack Developer | UI/UX Designer</h2>
-        <div class="links">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="#projects">Portfolio</a>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="badge">Lead Full-Stack Developer • UI/UX Designer</div>
+        <h1 class="hero-name">TOMIWA <span class="accent">SAMUEL</span></h1>
+        <p class="hero-tag">I build scalable web products and delightful interfaces that users love.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
         </div>
+        <div class="meta-row">
+          <span class="meta">✉️ createev69@gmail.com</span>
+          <span class="meta">📞 08038514353</span>
+          <span class="meta links-inline">
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a> •
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-wrap">
+          <img src="images/profile.png" alt="Tomiwa Samuel — profile" class="profile-img" />
+          <div class="profile-label">
+            <h3>Tomiwa Samuel</h3>
+            <p>Full Stack Developer • UI/UX Designer</p>
+          </div>
+        </div>
+        <div class="quick-stats">
+          <div><strong>5+</strong><small>Years</small></div>
+          <div><strong>+10</strong><small>Projects shipped</small></div>
+          <div><strong>30%</strong><small>Avg growth delivered</small></div>
+        </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<main>
-    <!-- About Me -->
-    <section id="about">
-        <h3>About Me</h3>
-        <p>Results-driven Full Stack Developer with 5+ years of experience building scalable web applications blending functionality with exceptional user experience. Adept at React, Node.js, and MongoDB, with strong UI/UX grounding. Proven success leading development cycles, mentoring teams, and delivering measurable impact across e-commerce, fintech, and SaaS projects.</p>
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="panel container">
+      <div class="split">
+        <div class="col text">
+          <h2>About Me</h2>
+          <p class="lead">Results-driven Full Stack Developer with expertise in React, Node.js and production-grade UX. I architect and ship scalable web apps for fintech, e-commerce and SaaS—bringing design systems, performance optimizations, and developer leadership together.</p>
+
+          <ul class="about-list">
+            <li><strong>Strength</strong>: bridging design & engineering to speed product-market fit.</li>
+            <li><strong>Focus</strong>: robust APIs, real-time features, smooth UX flows.</li>
+            <li><strong>Process</strong>: research → prototype → iterate → measure.</li>
+          </ul>
+
+        </div>
+        <div class="col art">
+          <img src="images/project3.png" alt="Design & development illustration" />
+        </div>
+      </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
-        <h3>Technical Skills</h3>
-        <div class="skills-container">
-            <div class="skill">
-                <h4>Front-End</h4>
-                <div class="skill-bar"><div class="progress" style="width:90%"></div></div>
-                <p>JS, TS, React, HTML5, CSS3, Tailwind</p>
-            </div>
-            <div class="skill">
-                <h4>Back-End</h4>
-                <div class="skill-bar"><div class="progress" style="width:85%"></div></div>
-                <p>Node.js, Express, REST APIs, WebSockets</p>
-            </div>
-            <div class="skill">
-                <h4>Database</h4>
-                <div class="skill-bar"><div class="progress" style="width:80%"></div></div>
-                <p>MongoDB, PostgreSQL, MySQL</p>
-            </div>
-            <div class="skill">
-                <h4>UI/UX</h4>
-                <div class="skill-bar"><div class="progress" style="width:90%"></div></div>
-                <p>Figma, Wireframing, Prototyping</p>
-            </div>
-            <div class="skill">
-                <h4>Tools & DevOps</h4>
-                <div class="skill-bar"><div class="progress" style="width:80%"></div></div>
-                <p>Git, Docker, AWS, CI/CD, Agile</p>
-            </div>
+    <!-- SKILLS -->
+    <section id="skills" class="panel container">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Front-End</h4>
+          <p>React · TypeScript · HTML5 · CSS3 · Tailwind</p>
+          <div class="bar"><div class="bar-fill" data-fill="92"></div></div>
         </div>
+
+        <div class="skill-card">
+          <h4>Back-End</h4>
+          <p>Node.js · Express · WebSockets · REST</p>
+          <div class="bar"><div class="bar-fill" data-fill="88"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Database & Infra</h4>
+          <p>MongoDB · PostgreSQL · Docker · AWS</p>
+          <div class="bar"><div class="bar-fill" data-fill="84"></div></div>
+        </div>
+
+        <div class="skill-card chart-card">
+          <h4>UX / Product</h4>
+          <canvas id="uxChart" width="160" height="160" aria-label="UX skills chart"></canvas>
+        </div>
+
+        <div class="skill-card">
+          <h4>Tools</h4>
+          <p>Git · CI/CD · Jira · Testing</p>
+          <div class="bar"><div class="bar-fill" data-fill="80"></div></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Professional Highlights -->
-    <section id="experience">
-        <h3>Professional Highlights</h3>
-        <div class="experience-card">
-            <h4>CT. Tech</h4>
-            <ul>
-                <li>Architected scalable e-commerce platform boosting online sales</li>
-                <li>Built real-time chat application enhancing user engagement</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h4>Greyhound Computers</h4>
-            <ul>
-                <li>Redesigned task manager interface improving usability</li>
-                <li>Led UX research improving conversions & engagement</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h4>Dicho Technology</h4>
-            <ul>
-                <li>Developed main company website using React & Node.js</li>
-                <li>Led UI/UX initiatives for web & mobile apps</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h4>Node.js Developer (Contract)</h4>
-            <ul>
-                <li>Built real-time chat & e-commerce apps</li>
-                <li>Implemented JWT authentication for secure sessions</li>
-            </ul>
-        </div>
+    <!-- EXPERIENCE HIGHLIGHTS (text-only) -->
+    <section id="experience" class="panel container">
+      <h2>Professional Highlights</h2>
+      <div class="cards-grid">
+        <article class="exp-card">
+          <h3>CT. Tech</h3>
+          <ul>
+            <li>Architected scalable e-commerce platform that drove measurable revenue growth</li>
+            <li>Built real-time chat to improve retention and engagement</li>
+          </ul>
+        </article>
+
+        <article class="exp-card">
+          <h3>Greyhound Computers</h3>
+          <ul>
+            <li>Redesigned task manager for improved workflows and retention</li>
+            <li>Led UX research and prototype testing to optimize conversions</li>
+          </ul>
+        </article>
+
+        <article class="exp-card">
+          <h3>Dicho Technology</h3>
+          <ul>
+            <li>Delivered company main site & product UI using React & Node</li>
+            <li>Established a modular design system across web/mobile</li>
+          </ul>
+        </article>
+
+        <article class="exp-card">
+          <h3>Node.js Developer (Contract)</h3>
+          <ul>
+            <li>Built secure real-time applications with JWT and sockets</li>
+            <li>Containerized & deployed scalable services to AWS</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
-    <!-- Projects / UIUX Designs -->
-    <section id="projects">
-        <h3>Projects & UI/UX Designs</h3>
-
-        <h4>Full Stack Development</h4>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="images/project1.png" alt="Project 1">
-                <p>Node.js & React web application with real-time functionality.</p>
-            </div>
-            <div class="project-card">
-                <img src="images/project2.png" alt="Project 2">
-                <p>E-commerce platform boosting sales and user engagement.</p>
-            </div>
-            <div class="project-card">
-                <img src="images/project3.png" alt="Project 3">
-                <p>Portfolio website showcasing development projects & UI/UX work.</p>
-            </div>
+    <!-- PROJECTS with filters and modal carousel -->
+    <section id="projects" class="panel container">
+      <div class="projects-head">
+        <h2>Projects & UI/UX Designs</h2>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="fullstack">Full Stack</button>
+          <button class="filter" data-filter="uiux">UI/UX</button>
         </div>
+      </div>
 
-        <h4>UI/UX Design Projects</h4>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="images/uiux1.png" alt="UI/UX Project 1">
-                <p>Mobile wallet prototype improving adoption by 50%.</p>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- FULLSTACK PROJECT 1 -->
+        <article class="project-card" data-type="fullstack" data-project="project1">
+          <div class="thumb"><img src="images/project1.png" alt="Project 1 screenshot"></div>
+          <div class="p-meta">
+            <h3>Real-time Trading Engine</h3>
+            <p>Node.js & React backend handling heavy concurrent loads with real-time backtesting.</p>
+            <div class="p-actions">
+              <button class="open-project" data-project="project1">View Details</button>
+              <a class="link" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <div class="project-card">
-                <img src="images/uiux2.png" alt="UI/UX Project 2">
-                <p>Redesigned task management interface boosting retention by 30%.</p>
+          </div>
+        </article>
+
+        <!-- FULLSTACK PROJECT 2 -->
+        <article class="project-card" data-type="fullstack" data-project="project2">
+          <div class="thumb"><img src="images/project2.png" alt="Project 2 screenshot"></div>
+          <div class="p-meta">
+            <h3>E-commerce Platform</h3>
+            <p>Scalable store with payments, analytics and optimized checkout flow.</p>
+            <div class="p-actions">
+              <button class="open-project" data-project="project2">View Details</button>
+              <a class="link" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <div class="project-card">
-                <img src="images/uiux3.png" alt="UI/UX Project 3">
-                <p>Dashboard for analytics tool enhancing data clarity & usability.</p>
+          </div>
+        </article>
+
+        <!-- FULLSTACK PROJECT 3 -->
+        <article class="project-card" data-type="fullstack" data-project="project3">
+          <div class="thumb"><img src="images/project3.png" alt="Project 3 screenshot"></div>
+          <div class="p-meta">
+            <h3>Portfolio & CMS</h3>
+            <p>Personal portfolio with CMS-backed blog and analytics dashboards.</p>
+            <div class="p-actions">
+              <button class="open-project" data-project="project3">View Details</button>
+              <a class="link" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
             </div>
-        </div>
+          </div>
+        </article>
+
+        <!-- UI/UX 1 -->
+        <article class="project-card" data-type="uiux" data-project="uiux1">
+          <div class="thumb"><img src="images/uiux1.png" alt="UI/UX 1"></div>
+          <div class="p-meta">
+            <h3>Mobile Wallet Prototype</h3>
+            <p>End-to-end prototype tested with users; improved onboarding adoption.</p>
+            <div class="p-actions">
+              <button class="open-project" data-project="uiux1">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- UI/UX 2 -->
+        <article class="project-card" data-type="uiux" data-project="uiux2">
+          <div class="thumb"><img src="images/uiux2.png" alt="UI/UX 2"></div>
+          <div class="p-meta">
+            <h3>Task Manager Redesign</h3>
+            <p>Workflow simplification and microinteraction-led improvements.</p>
+            <div class="p-actions">
+              <button class="open-project" data-project="uiux2">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- UI/UX 3 -->
+        <article class="project-card" data-type="uiux" data-project="uiux3">
+          <div class="thumb"><img src="images/uiux3.png" alt="UI/UX 3"></div>
+          <div class="p-meta">
+            <h3>Analytics Dashboard</h3>
+            <p>Data-first dashboard that improved clarity and reduced support load.</p>
+            <div class="p-actions">
+              <button class="open-project" data-project="uiux3">View Details</button>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-        <h3>Contact Me</h3>
-        <p>✉️ createev69@gmail.com | 📞 08038514353</p>
-        <div class="links">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://github.com" target="_blank">GitHub</a>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="panel container">
+      <h2>Contact</h2>
+      <p class="lead">Let’s build something great. I’m available for full-time and freelance roles.</p>
+      <div class="contact-row">
+        <a class="btn outline" href="mailto:createev69@gmail.com">Email Me</a>
+        <a class="btn outline" href="tel:+2348038514353">Call</a>
+        <a class="btn outline" href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </section>
-</main>
+  </main>
 
-<footer>
-    <p>© 2025 Tomiwa Samuel. All Rights Reserved.</p>
-</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Tomiwa Samuel — Built with code & craft</small>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <!-- PROJECT DETAIL MODAL (reused for all projects) -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close">×</button>
+      <div class="modal-body">
+        <div class="modal-carousel">
+          <button class="prev">‹</button>
+          <img id="modalImage" src="" alt="Project image">
+          <button class="next">›</button>
+        </div>
+        <div class="modal-meta">
+          <h3 id="modalTitle"></h3>
+          <p id="modalDesc"></p>
+          <div id="modalLinks"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
