@@ -1,4 +1,4 @@
-// Fade-in sections on scroll
+// Fade-in sections
 const sections = document.querySelectorAll('section');
 window.addEventListener('scroll', () => {
     sections.forEach(section => {
@@ -23,11 +23,4 @@ window.addEventListener('load', () => {
         bar.style.width = '0';
         setTimeout(() => { bar.style.width = width; }, 500);
     });
-});
-
-// Dark/Light mode toggle
-const themeBtn = document.getElementById('themeBtn');
-themeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    themeBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
